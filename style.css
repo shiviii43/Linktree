@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    background-image:url(images/bgimage.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.profile-picture{
+    align-items: center;
+    padding: 30px;
+    padding-top: 50px;  
+    padding-bottom: 0px;
+    margin:auto;
+    width:max-content;
+}
+#icon{
+    height: 200px;
+    width: auto;
+    border-radius: 100%;
+    transition:.2s;
+}
+.info-box{
+    padding: 0px;
+    text-align: center;
+    font-size:25px;
+    font-family: "Edu TAS Beginner", cursive;
+}
+.link-buttons{
+    margin:auto;
+    width: max-content;
+    padding:7px;
+    transition: .2s;
+}
+.button1,.button2, .button3, .button4, .button5, .button6, .button7{
+    border:2px solid orangered;
+    margin:0px;
+    padding:15px;
+    width:250px;
+    border-radius: 25px;
+    font-family: "Exo 2", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 15px;
+    box-shadow: 7px 7px 5px orangered ;
+}
+.button1{
+    background-image: url(images/instagram_icon.png);
+}
+.button2{
+    background-image: url(images/linkedin_icon.png);
+}
+.button3{
+    background-image:url(images/facebook_icon.png);
+}
+.button4{
+    background-image:url(images/snapchat_icon.png);
+}
+.button5{
+    background-image: url(images/github_icon.png);
+}
+.button6{
+    background-image: url(images/potfolio_icon.png);
+}
+.button7{
+    background-image: url(images/spotify_icon.png);
+}
+#icon-button2,#icon-button1{
+    height:40px;
+    width:max-content;
+    padding :7px;
+}
+#anch{
+    text-decoration: none;
+}
+.button-box{
+    padding-top:10px;
+    padding-bottom: 30px;
+}
+.link-buttons:hover{
+    transform: scale(1.4);
+}
+.button1:hover,.button2:hover, .button3:hover, .button4:hover, .button5:hover, .button6:hover, .button7:hover{
+    color: orangered;
+}
+#icon:hover{
+    transform:scale(1.4);
+    border-radius: 0px;
+    border: 4px solid black;
+}
