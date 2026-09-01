@@ -60,6 +60,7 @@ h2{
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: 15px;
+    box-shadow: 0.4rem 0.4rem black;
 }
 
 .button1{
@@ -97,7 +98,8 @@ h2{
 
 .button1:hover,.button2:hover, .button3:hover, .button4:hover, .button5:hover, .button6:hover, .button7:hover{
     color: orangered;
-    box-shadow: 0.4rem 0.4rem black;
+    box-shadow: 0.4rem 0.4rem orangered;
+    border: 2px solid orangered;
 }
 
 #icon:hover{
