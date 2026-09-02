@@ -5,7 +5,6 @@
     <link rel="icon" href="images/ico.png" type="image/x-icon"/>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
     <div class="page">
         <div class="profile-picture">
@@ -33,10 +32,23 @@
                 </a>
             </div>
             <div class="link-buttons">
-                <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=shivanshharbola190259@gmail.com" rel="noopener noreferrer">
+                <a id="email-link" href="#">
                     <button class="button4">Email Me</button><br>    
                 </a>
             </div>
+            <script>
+                const emailLink = document.getElementById("email-link");
+                const email = "shivanshharbola190259@gmail.com";
+
+                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+                    emailLink.href = "mailto:" + email;
+                }
+                else {
+                    emailLink.href ="https://mail.google.com/mail/?view=cm&fs=1&to=" + email;
+                    emailLink.target = "_blank";
+                    emailLink.rel = "noopener noreferrer";
+                }
+            </script>
             <div class="link-buttons">
                 <a target="_blank" href="https://github.com/shiviii43">
                     <button class="button5">GitHub</button><br>
@@ -49,5 +61,42 @@
             </div>
         </div>
     </div>
+    <script>
+        const links = document.querySelectorAll(".link-buttons a");
+        const icon = document.getElementById("icon");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (event) {
+                if (window.matchMedia("(hover: none)").matches) {
+                    const button = this.querySelector("button");
+                    // Avoiding the delay if email is clicked
+                    if (this.id === "email-link") {
+                        button.classList.add("button-tap-effect");
+                        setTimeout(() => {
+                            button.classList.remove("button-tap-effect");
+                        }, 500);
+                        return;
+                    }
+                    //Any other Link buttom clicked
+                    event.preventDefault();
+                    const destination = this.href;
+                    button.classList.add("button-tap-effect");
+                    setTimeout(() => {
+                        button.classList.remove("button-tap-effect");
+                        window.open(destination, "_blank");
+                    }, 500);
+                }
+            });
+        });
+        //Profile Picture onclick delay
+        icon.addEventListener("click", function () {
+            if (window.matchMedia("(hover: none)").matches) {
+                this.classList.add("icon-tap-effect");
+                setTimeout(() => {
+                    this.classList.remove("icon-tap-effect");
+                }, 4000);
+            }
+        });
+    </script>
 </body>
 </html>
